@@ -553,6 +553,7 @@ a controller, this is pretty easy. Add the following method to the
 
     public function createAction(EntityManagerInterface $em)
     {
+        $em = $this->getDoctrine()->getManager();
         // or fetch the em via the container
         // $em = $this->get('doctrine')->getManager();
 
